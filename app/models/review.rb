@@ -1,5 +1,6 @@
 class Review < ApplicationRecord
   belongs_to :product
-  validates :author, :content_body, :rating, presence: true
-  validates :rating, numericality: { only_integer: true , :less_than_or_equal_to => 5 }
+  validates :author, presence: true
+  validates :content_body, presence: true
+  validates :rating, presence: true
 end
