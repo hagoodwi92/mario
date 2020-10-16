@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe Product do
   it("titleizes the name of an product") do
-    product = Product.create({name: "giant steps"})
-    expect(product.name()).to(eq("Giant Steps"))
+    product = Product.create({name: "alex"})
+    expect(product.name).to(eq("Alex"))
   end
 
   
