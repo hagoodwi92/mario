@@ -8,6 +8,7 @@ Things you may want to cover:
 # THIS APP IS STILL IN PROGRESS
 * Working on adding 250 nested reviews using the faker gem.
 * Also one failing test, even though the callback is working the test is not
+* Integration testing 
 
 * Ruby version
 
