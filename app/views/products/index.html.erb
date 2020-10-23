@@ -1,16 +1,18 @@
-<h1>Mario's Products and Reviews</h1>
+<h1> Mario's Products and Reviews</h1>
 
-<h1>Products</h1>
+<p>Welcome to my store. Here, you can add products and then review these products. Reviews are connected to their corresponding products. 
 
-<% if @products.any? %>
-  <ul>
-    <% @products.each do |product| %>
-      <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>There are no products yet.</p>
-<% end %>
+<%= link_to "Sign up", new_user_registration_path %>
 
+<%= link_to "Sign out", destroy_user_session_path %>
 
+<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+
+<p><%= link_to "Products", products_path %></p>
 <p><%= link_to "Create new product", new_product_path %></p>
+
+<h1> Top 3 products </h1>
+<%= Product.order(created_at: :desc).limit(10) %>
+
+<h3>Product with the most reviews: </h3>
+<%= Product.most_reviews %>
