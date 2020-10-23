@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Product.destroy_all
+Review.destroy_all
 
 50.times do |index|
   product = Product.create!(name: Faker::Music.album, cost: 5, country_of_origin: "us")
@@ -14,4 +15,3 @@ Product.destroy_all
     product.reviews.new(Review.create!(author: Faker::Music.album, content_body: "sfsfddfsdfasdfasdfasdfasdfasdfasdfassadfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasasdfdsfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasddfas", rating: 3))
   end
 end
-
