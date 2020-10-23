@@ -26,6 +26,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @ten_product = Product.ten_most_recent
     render :show
   end
 
@@ -43,6 +44,7 @@ class ProductsController < ApplicationController
     @product.destroy
     redirect_to products_path
   end
+
 
   private
     def product_params

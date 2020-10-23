@@ -4,3 +4,18 @@
 
 <p><%= link_to "Products", products_path %></p>
 <p><%= link_to "Create new product", new_product_path %></p>
+
+<%= @three %>
+
+<% if @three.any? %>
+  <ul>
+    <% @three.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no products yet.</p>
+<% end %>
+
+<h3>Product with the most reviews: </h3>
+<%= Product.most_reviews %>
