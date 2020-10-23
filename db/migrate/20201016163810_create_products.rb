@@ -5,7 +5,7 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.column(:cost, :integer)
       t.column(:country_of_origin, :string)
       
-      t.timestamps()
+      t.timestamps() 
     end
   end
 end
