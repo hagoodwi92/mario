@@ -26,7 +26,6 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @ten_product = Product.ten_most_recent
     render :show
   end
 
