@@ -1,9 +1,21 @@
-<h1> Mario's Products and Reviews</h1>
 
-<p>Welcome to my store. Here, you can add products and then review these products. Reviews are connected to their corresponding products. </p>
+<h1>Mario's Products and Reviews</h1>
 
-<p><%= link_to "Products", products_path %></p>
+<h1>Products</h1>
+
+<% if @products.any? %>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no products yet.</p>
+<% end %>
+
+
 <p><%= link_to "Create new product", new_product_path %></p>
+
 
 <h1> Top 3 products </h1>
 <%= Product.order(created_at: :desc).limit(10) %>

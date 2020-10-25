@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   # scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
-  def self.three_most_recent
+  def self.three
     order(created_at: :desc).limit(3)
   end
 

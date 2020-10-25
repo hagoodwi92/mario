@@ -15,3 +15,4 @@ Review.destroy_all
     product.reviews.new(Review.create!(author: Faker::Music.album, content_body: "sfsfddfsdfasdfasdfasdfasdfasdfasdfassadfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasasdfdsfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasddfas", rating: 3))
   end
 end
+
