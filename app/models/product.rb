@@ -12,7 +12,7 @@ class Product < ApplicationRecord
     .limit(1)
     )}
   
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   validates :name, presence: true
   validates :cost, presence: true
   validates :country_of_origin, presence: true

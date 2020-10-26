@@ -10,9 +10,8 @@ Product.destroy_all
 Review.destroy_all
 
 50.times do |index|
-  product = Product.create!(name: Faker::Music.album, cost: 5, country_of_origin: "us")
+  @product = Product.create!(name: Faker::Music.album, cost: 5, country_of_origin: "us")
   rand(3..7).times do
-    product.reviews.new(Review.create!(author: Faker::Music.album, content_body: "sfsfddfsdfasdfasdfasdfasdfasdfasdfassadfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasasdfdsfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasddfas", rating: 3))
+    @review = Review.create!(author: Faker::Music.album, content_body: "sfsfddfsdfasdfasdfasdfasdfasdfasdfassadfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasasdfdsfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasddfas", rating: 3, product_id: @product.id)
   end
 end
-
