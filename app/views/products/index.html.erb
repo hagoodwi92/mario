@@ -18,7 +18,15 @@
 
 
 <h1> Top 3 products </h1>
-<%= Product.order(created_at: :desc).limit(10) %>
+<% if @products.three.any? %>
+  <ul>
+    <% @products.three.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no top 3 products.</p>
+<% end %>
 
 <h3>Product with the most reviews: </h3>
-<%= Product.most_reviews %>
+<%= Product.most_reviews.first.name %>
