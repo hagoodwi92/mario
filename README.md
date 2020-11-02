@@ -1,29 +1,33 @@
 # README
+This project is a rails app that displays products, and their nested reviews. It has full CRUD functionality, as well as authentication and authorization.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Endpoints
+- [x] GET- /products, /products/:id, /products/:id/review/:id 
+- [x] POST- /products/, /reviews/
+- [x] PUT- /products/:id, /reviews/:id
+- [x] DELETE- /products/:id, /reviews/:id
 
-Things you may want to cover:
+Setup/Installation
+1. `$ git clone` [this repository](https://github.com/hagoodwi92/mario)
+2. `$ cd mario`
+3. `$ bundle install`
+4. `$ rails db:create`
+5. `$ rails db:migrate`
+6. `$ rails s` to start the server 
 
-# THIS APP IS STILL IN PROGRESS
-* Working on adding 250 nested reviews using the faker gem.
-* Also one failing test, even though the callback is working the test is not
-* Just remembered I also need integration testing 
+Known Bugs
+- No known bugs at this time. 
 
-* Ruby version
+Technologies used
+- Ruby on Rails
+  -Authentication and authorization
+  - ActiveRecord
+  - rspec testing
+  - faker
 
-* System dependencies
- 
-* Configuration
+Support
+- Contact hagoodwi@gmail.com for support. 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+License 
+- {This software is licensed under the MIT license}
+- Copyright (c) 2020 {Alex Goodwin}
