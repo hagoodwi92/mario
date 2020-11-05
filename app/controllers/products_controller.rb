@@ -1,7 +1,14 @@
 class ProductsController < ApplicationController
-  skip_before_action :authenticate_user!, :only => [:landing]
-  skip_before_action :authenticate_user!, :only => [:index]
-  skip_before_action :authenticate_user!, :only => [:show]
+  # skip_before_action :authenticate_user!, :only => [:landing]
+  # skip_before_action :authenticate_user!, :only => [:index]
+  # skip_before_action :authenticate_user!, :only => [:show]
+
+  before_action :only => [:index] do
+    redirect_to new_user_session_path unless current_user && current_user.admin
+  end
+  before_action :only => [:new] do
+    redirect_to new_user_session_path unless current_user && current_user.admin
+  end
   
   # skip_before_action :authenticate_user!, :only => [:index/show/new]
   def index
