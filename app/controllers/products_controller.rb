@@ -1,5 +1,9 @@
 class ProductsController < ApplicationController
-
+  skip_before_action :authenticate_user!, :only => [:landing]
+  skip_before_action :authenticate_user!, :only => [:index]
+  skip_before_action :authenticate_user!, :only => [:show]
+  
+  # skip_before_action :authenticate_user!, :only => [:index/show/new]
   def index
     @products = Product.all
     render :index
