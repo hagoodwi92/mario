@@ -1,7 +1,8 @@
 # README
 
 # trying to finish this eod thursday
-
+Admin readme: test1@test1.com
+Password: password
 
 This project is a rails app that displays products, and their nested reviews. It has full CRUD functionality, as well as authentication and authorization.
 
